@@ -1,0 +1,314 @@
+/* ==========================================================================
+   STYLES SAISIR RÉSULTAT
+   ========================================================================== */
+
+/* Conteneur principal */
+.conteneur-formulaire {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Carte formulaire */
+.carte-formulaire {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* En-tête formulaire */
+.entete-formulaire {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    color: white;
+}
+
+.entete-formulaire h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.entete-formulaire h2 i {
+    font-size: 28px;
+}
+
+.entete-formulaire p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Info match */
+.info-match {
+    background: #f8f9fa;
+    padding: 15px 25px;
+    margin: 20px 30px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-left: 4px solid #3498db;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.info-item i {
+    color: #3498db;
+    width: 20px;
+    font-size: 16px;
+}
+
+/* Grille score */
+.grille-score-large {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 30px;
+}
+
+.grille-score-large .groupe-formulaire {
+    flex: 1;
+    max-width: 220px;
+}
+
+.groupe-formulaire label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+    text-align: center;
+}
+
+.groupe-formulaire label i {
+    margin-right: 6px;
+    color: #3498db;
+}
+
+.grille-score-large .groupe-formulaire input {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    padding: 20px 15px;
+    font-weight: bold;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.grille-score-large .groupe-formulaire input:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+}
+
+.grille-score-large .groupe-formulaire input:hover {
+    border-color: #3498db;
+}
+
+.separateur-score-large {
+    font-size: 48px;
+    font-weight: bold;
+    color: #6c757d;
+    padding-bottom: 15px;
+}
+
+/* Actions formulaire */
+.actions-formulaire {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 25px 30px;
+    border-top: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.bouton-principal {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.bouton-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #218838 0%, #1aa179 100%);
+}
+
+.bouton-secondaire {
+    background: #6c757d;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.bouton-secondaire:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* Messages */
+.message-erreur {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease;
+}
+
+.message-succes {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #28a745;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease;
+}
+
+.message-erreur i,
+.message-succes i {
+    font-size: 20px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de pulsation pour les champs */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.grille-score-large .groupe-formulaire input:focus {
+    animation: pulse 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .conteneur-formulaire {
+        padding: 15px;
+    }
+
+    .entete-formulaire {
+        padding: 25px;
+    }
+
+    .entete-formulaire h2 {
+        font-size: 24px;
+    }
+
+    .grille-score-large {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        padding: 0 20px;
+    }
+
+    .grille-score-large .groupe-formulaire {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .grille-score-large .groupe-formulaire input {
+        font-size: 36px;
+        padding: 15px;
+    }
+
+    .separateur-score-large {
+        padding-bottom: 0;
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+
+    .info-match {
+        margin: 15px 20px;
+        padding: 12px 18px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .actions-formulaire {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .bouton-principal,
+    .bouton-secondaire {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .entete-formulaire h2 {
+        font-size: 20px;
+    }
+
+    .entete-formulaire p {
+        font-size: 12px;
+    }
+
+    .grille-score-large .groupe-formulaire input {
+        font-size: 28px;
+        padding: 12px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+
+    .bouton-principal,
+    .bouton-secondaire {
+        font-size: 14px;
+    }
+}

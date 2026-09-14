@@ -1,0 +1,430 @@
+/* ==========================================================================
+   STYLES GESTION DES JOUEURS
+   ========================================================================== */
+
+.conteneur-gestion {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête de gestion */
+.entete-gestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.entete-gestion h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.entete-gestion h1 i {
+    color: #3498db;
+}
+
+/* Actions de gestion */
+.actions-gestion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bouton-ajouter {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+.bouton-ajouter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+    background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+}
+
+/* Statistiques */
+.statistiques {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    transition: all 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat i {
+    font-size: 14px;
+}
+
+.stat i.fa-user-check { color: #28a745; }
+.stat i.fa-user-injured { color: #ffc107; }
+.stat i.fa-user-slash { color: #dc3545; }
+.stat i.fa-user { color: #17a2b8; }
+
+/* Tableau des joueurs */
+.tableau-donnees {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.table-joueurs {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+.table-joueurs thead th {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.table-joueurs tbody td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #495057;
+}
+
+.table-joueurs tbody tr {
+    transition: all 0.3s;
+}
+
+.table-joueurs tbody tr:hover {
+    background: #f8f9fa;
+    transform: translateX(2px);
+}
+
+/* Colonnes */
+.col-id {
+    width: 60px;
+    text-align: center;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.col-licence {
+    font-family: monospace;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.col-nom, .col-prenom {
+    font-weight: 500;
+}
+
+.col-date-naissance {
+    white-space: nowrap;
+}
+
+.age-indicator {
+    font-size: 11px;
+    color: #6c757d;
+    margin-left: 5px;
+}
+
+.col-taille, .col-poids {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Badges de statut */
+.badge-statut {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.statut-actif {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+}
+
+.statut-blesse {
+    background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+    color: #212529;
+    box-shadow: 0 2px 5px rgba(255, 193, 7, 0.3);
+}
+
+.statut-suspendu {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+}
+
+.statut-absent {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+    box-shadow: 0 2px 5px rgba(108, 117, 125, 0.3);
+}
+
+.statut-inconnu {
+    background: #6c757d;
+    color: white;
+}
+
+/* Actions tableau */
+.actions-tableau {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bouton-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.bouton-modifier {
+    background: #ffc107;
+    color: #212529;
+}
+
+.bouton-modifier:hover {
+    background: #e0a800;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+}
+
+.bouton-voir {
+    background: #17a2b8;
+    color: white;
+}
+
+.bouton-voir:hover {
+    background: #138496;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(23, 162, 184, 0.4);
+}
+
+.bouton-commentaire {
+    background: #6f42c1;
+    color: white;
+}
+
+.bouton-commentaire:hover {
+    background: #5a32a3;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(111, 66, 193, 0.4);
+}
+
+.bouton-supprimer {
+    background: #dc3545;
+    color: white;
+}
+
+.bouton-supprimer:hover {
+    background: #c82333;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4);
+}
+
+/* Messages */
+.message-succes {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #28a745;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease;
+}
+
+.message-erreur {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease;
+}
+
+.message-succes i, .message-erreur i {
+    font-size: 18px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aucune donnée */
+.aucune-donnee {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.illustration-vide {
+    font-size: 80px;
+    color: #dee2e6;
+    margin-bottom: 20px;
+}
+
+.aucune-donnee h3 {
+    margin: 0 0 10px 0;
+    color: #495057;
+    font-size: 24px;
+}
+
+.aucune-donnee p {
+    color: #6c757d;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.bouton-principal {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.bouton-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980b9 0%, #1f6e9e 100%);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .tableau-donnees {
+        overflow-x: auto;
+    }
+    
+    .table-joueurs {
+        min-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteneur-gestion {
+        padding: 15px;
+    }
+    
+    .entete-gestion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .entete-gestion h1 {
+        font-size: 24px;
+    }
+    
+    .actions-gestion {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .bouton-ajouter {
+        justify-content: center;
+    }
+    
+    .statistiques {
+        justify-content: center;
+    }
+    
+    .actions-tableau {
+        gap: 5px;
+    }
+    
+    .bouton-action {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+    
+    .badge-statut {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}

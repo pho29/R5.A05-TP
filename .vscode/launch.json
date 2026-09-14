@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TP1<tp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "r5a05.TP1",
+            "projectName": "tp",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

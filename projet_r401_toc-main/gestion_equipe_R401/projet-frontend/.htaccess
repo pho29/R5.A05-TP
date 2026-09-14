@@ -1,0 +1,11 @@
+# projet-frontend/.htaccess
+RewriteEngine On
+RewriteBase /projet_r401_toc/gestion_equipe_R401/projet-frontend/
+
+# Rediriger les URLs API vers le backend
+RewriteRule ^api/(.*)$ http://localhost/projet_r401_toc/gestion_equipe_R401/projet-backend/$1 [L,QSA]
+
+# Rediriger toutes les requêtes vers index.php pour le routage frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
