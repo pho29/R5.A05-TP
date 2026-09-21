@@ -18,4 +18,8 @@ public class JoueurController {
     public List<Joueur> getJoueurs() {
         return joueurRepository.findAll();
     }
+    @GetMapping("/matchs")
+    public List<Matchs> getMatchs() {
+        return matchsRepository.findAll();
+    }
 }
