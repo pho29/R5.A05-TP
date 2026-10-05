@@ -60,11 +60,11 @@ define('CHEMIN_SECURITE', __DIR__ . '/../securite');
 // =====================================================
 
 /** URL de base du backend (sans /api/ - architecture RESTful) */
-define('URL_API_BACKEND', 'http://localhost/projet_r401_toc/gestion_equipe_R401/projet-backend');
-
+define('URL_API_BACKEND', 'http://localhost:8080');
 /** URL de l'API d'authentification */
 define('URL_API_AUTH', 'http://localhost/projet_r401_toc/gestion_equipe_R401/projet-apiAuthentification/auth.php');
-
+define('UTILISATEUR_BDD', 'root');
+define('MOT_DE_PASSE_BDD', '$iutinfo');
 // =====================================================
 // ENDPOINTS API RESTFUL (via le routeur backend)
 // =====================================================
